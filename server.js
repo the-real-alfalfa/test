@@ -10,8 +10,34 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/", (req, res, next) => {
-  res.send("Shubham pani nikalta h.");
+app.get("/shubham", (req, res, next) => {
+  res.send({
+    name: "Shubham",
+    course: "pg-dac",
+    home: "Karnataka",
+    favourite: "water",
+    hobby: "fetching water",
+  });
+});
+
+app.get("/gautam", (req, res, next) => {
+  res.send({
+    name: "Gautam",
+    course: "pg-dac",
+    home: "MP",
+    favourite: "oregano, ketchup",
+    hobby: "phone call",
+  });
+});
+
+app.get("/girish", (req, res, next) => {
+  res.send({
+    name: "Girish",
+    course: "pg-dac",
+    home: "UK",
+    favourite: "ice-cream",
+    hobby: "sleeping",
+  });
 });
 
 app.listen(PORT, () => {
